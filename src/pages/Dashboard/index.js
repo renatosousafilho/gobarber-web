@@ -1,8 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
-import api from '~/services/api';
+import { signOut } from '~/store/modules/auth/actions';
 
 export default function Dashboard() {
-  api.get('appointments');
-  return <div>teste</div>;
+  const dispatch = useDispatch();
+
+  function handleSignOut() {
+    dispatch(signOut());
+  }
+
+  return (
+    <div>
+      <button onClick={handleSignOut}>Sair</button>
+    </div>
+  );
 }
