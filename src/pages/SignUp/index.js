@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Form, Input } from '@rocketseat/unform';
+import { Form, Input, Check } from '@rocketseat/unform';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
@@ -32,6 +32,7 @@ export default function SignUp() {
         <Input name="name" type="name" placeholder="Seu nome" />
         <Input name="email" type="email" placeholder="Seu e-mail" />
         <Input name="password" type="password" placeholder="Sua senha" />
+        <Check name="isProvider" label="Test Field" />
 
         <button type="submit">Criar conta</button>
         <Link to="/">Já tenho login</Link>
