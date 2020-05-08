@@ -1,5 +1,8 @@
 import React from 'react';
 
-export default function index() {
+import api from '~/services/api';
+
+export default function Dashboard() {
+  api.get('appointments');
   return <div>teste</div>;
 }
